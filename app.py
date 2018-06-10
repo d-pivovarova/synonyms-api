@@ -1,7 +1,8 @@
 from flask import Flask
+import json
 import qp
-app = Flask(__name__)
 
+app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
@@ -11,5 +12,5 @@ def hello_world():
 @app.route('/synonym/<query>')
 def synonym(query):
     s = qp.synonym(query)
-    return s
+    return json.dumps(s, ensure_ascii=False)
 

@@ -1,5 +1,7 @@
 
 def synonym(query):
     if query == "iphone":
-        return ["смартфон"]
-    return ["синоним"]
+        result = ["смартфон"]
+    else:
+        result = ['синоним']
+    return result
